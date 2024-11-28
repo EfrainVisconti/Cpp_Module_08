@@ -12,7 +12,7 @@
 
 NAME = easyfind
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 SRCS = main.cpp
 HDRS = easyfind.hpp
 
