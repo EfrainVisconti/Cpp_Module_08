@@ -6,7 +6,7 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 16:10:32 by eviscont          #+#    #+#             */
-/*   Updated: 2024/11/28 16:12:11 by eviscont         ###   ########.fr       */
+/*   Updated: 2024/11/29 14:16:32 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ const std::string GREEN = "\033[32m";
 
 int main()
 {
-	std::cout << GREEN << "-----MutantStack test-----" << RESET << std::endl;
+	std::cout << GREEN << "-----MutantStack test (LIFO stack)-----" << RESET << std::endl;
 	MutantStack<int> mstack;
 	mstack.push(5);
 	mstack.push(17);
@@ -41,8 +41,9 @@ int main()
 		++it;
 	}
 	std::stack<int> s(mstack);
-	
-	std::cout << GREEN << "-----std::list test-----" << RESET << std::endl;
+	std::cout << s.top() << std::endl;
+
+	std::cout << GREEN << "-----std::list test (doubly-linked lists)-----" << RESET << std::endl;
 	std::list<int> lst;
 	lst.push_back(5);
 	lst.push_back(17);
@@ -63,6 +64,6 @@ int main()
 		++itl;
 	}
 	std::list<int> l(lst);
-
+	std::cout << l.back() << std::endl;
 	return 0;
 }
